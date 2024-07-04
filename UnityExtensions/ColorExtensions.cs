@@ -51,5 +51,15 @@ namespace kosars.UnityExtensions
             color.a = alpha;
             graphic.color = color;
         }
+        
+        public static void SetColorWithountAlpha(this SpriteRenderer graphic, Color color) {
+            float alpha = graphic.color.a;
+            color.a = alpha;
+            graphic.color = color;
+        }
+        
+        public static void SetAlpha(this SpriteRenderer spriteRenderer, float alpha) {
+            spriteRenderer.color = spriteRenderer.color.SetAlpha(alpha);
+        }
     }
 }
